@@ -60,12 +60,14 @@ function Navbar() {
           </a>
 
           {/* Resume Download (desktop) */}
-          <button
-            onClick={() => window.open("http://localhost:5000/api/resume/download", "_blank")}
+          <a
+            href="/resume.pdf"
+            download="Ajay-Kumar-Singh-Resume.pdf"
             className="hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
           >
             Resume
-          </button>
+          </a>
+
 
           {/* Dark mode toggle */}
           {/* <button
@@ -111,12 +113,14 @@ function Navbar() {
             </a>
 
             {/* Resume Download (mobile) */}
-            <button
-              onClick={() => window.open("http://localhost:5000/api/resume/download", "_blank")}
-              className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
+            <a
+              href="/resume.pdf"
+              download="Ajay-Kumar-Singh-Resume.pdf"
+              className="hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
             >
               Resume
-            </button>
+            </a>
+
 
             {/* Dark Mode Toggle (mobile) */}
             {/* <button
