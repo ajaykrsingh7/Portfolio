@@ -66,7 +66,7 @@ export default function Contacts() {
 
                 {/* Connect With Me - Left side */}
                 <div className="flex flex-col items-center md:items-start mb-12 md:mb-0 md:w-1/2">
-                    <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+                    <h3 className="text-3xl font-bold text-gray-100 dark:text-gray-100 mb-4">
                         Connect With Me
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-6 text-xl text-start">
@@ -87,7 +87,7 @@ export default function Contacts() {
                             href="https://github.com/ajaykrsingh7"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center space-x-4 text-gray-800 dark:text-gray-100 hover:text-gray-600"
+                            className="flex items-center space-x-4 text-gray-100 dark:text-gray-100 hover:text-gray-600"
                         >
                             <FaGithub />
                             <span>GitHub</span>
