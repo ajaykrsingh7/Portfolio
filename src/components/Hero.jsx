@@ -52,7 +52,7 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.8 }}
           className="mt-4 text-xl sm:text-2xl text-gray-700 dark:text-gray-300"
         >
-          <div className="text-2xl text-bold">
+          <div className="text-2xl text-bold mt-4 text-lg text-gray-800">
             Full Stack Developer(MERN) | AI & Cloud Enthusiast
           </div>
         </motion.h2>
@@ -63,7 +63,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-6 max-w-2xl text-gray-600 dark:text-gray-400"
         >
-          <div className="text-xl text bold">
+          <div className="text-xl text bold mt-4 text-lg text-gray-800">
             I build modern, scalable web apps with React, Node.js, and AI
           integration. Passionate about creating projects that merge innovation
           with functionality.
