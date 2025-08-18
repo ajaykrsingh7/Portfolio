@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import AyurvedaImg from "../assets/chatbot.jpg";
+import AyurvedaImg from "../assets/vedaai.png";
 import PortfolioImg from "../assets/portfolio.png";
 import DAMSImg from "../assets/tsk.png";
 import ApnaImg from "../assets/apnacollage.png"
