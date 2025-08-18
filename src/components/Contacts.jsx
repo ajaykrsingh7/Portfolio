@@ -61,67 +61,17 @@ export default function Contacts() {
     };
 
     return (
-        <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-6 py-16">
-            <div className="flex flex-col md:flex-row md:space-x-16 w-full max-w-5xl">
-
-                {/* Connect With Me - Left side */}
-                <div className="flex flex-col items-center md:items-start mb-12 md:mb-0 md:w-1/2">
-                    <h3 className="text-3xl font-bold text-gray-100 dark:text-gray-100 mb-4 mt-4  text-gray-700">
-                        Connect With Me
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 text-xl text-start">
-                        I'm open to collaborations and opportunities. Feel free to reach out!
-                    </p>
-                    <div className="flex flex-col space-y-6 text-3xl">
-                        <a
-                            href="https://www.linkedin.com/in/ajaykrsingh07/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 text-blue-600 hover:text-blue-800"
-                        >
-                            <FaLinkedin />
-                            <span>LinkedIn</span>
-                        </a>
-
-                        <a
-                            href="https://github.com/ajaykrsingh7"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 text-gray-800 dark:text-gray-100 hover:text-gray-600"
-                        >
-                            <FaGithub />
-                            <span>GitHub</span>
-                        </a>
-
-                        <a
-                            href="https://twitter.com/iamAjaykrsingh7"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 text-blue-400 hover:text-blue-600"
-                        >
-                            <FaTwitter />
-                            <span>Twitter</span>
-                        </a>
-
-                        <a
-                            href="mailto:ajaykrsingh2002@gmail.com"
-                            className="flex items-center space-x-4 text-red-500 hover:text-red-700"
-                        >
-                            <FaEnvelope />
-                            <span>Email</span>
-                        </a>
-                    </div>
-
-                </div>
+        <section id="contact" className="min-h-screen flex  items-center justify-center px-6 py-16">
+            
 
                 {/* Contact Form - Right side */}
-                <div className="md:w-1/2">
-                    <h2 className="text-3xl font-bold mb-6 text-center md:text-left">Contact Me</h2>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <div className="md:w-1/2 flex flex-col justify-center items-center">
+                    <h2 className="text-3xl font-bold mb-6 text-center md:text-left mr-10">Contact Me</h2>
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
                         <input
                             type="text"
                             name="name"
-                            placeholder="Your Name"
+                            placeholder=" Enter Your Name"
                             value={formData.name}
                             onChange={handleChange}
                             className="border p-3 rounded"
@@ -130,7 +80,7 @@ export default function Contacts() {
                         <input
                             type="email"
                             name="email"
-                            placeholder="Your Email"
+                            placeholder="Enter Your Email"
                             value={formData.email}
                             onChange={handleChange}
                             className="border p-3 rounded"
@@ -138,7 +88,7 @@ export default function Contacts() {
                         />
                         <textarea
                             name="message"
-                            placeholder="Your Message"
+                            placeholder="Your Message...."
                             value={formData.message}
                             onChange={handleChange}
                             className="border p-3 rounded h-32"
@@ -154,7 +104,7 @@ export default function Contacts() {
                     </form>
                 </div>
 
-            </div>
+            
 
             {/* Toast Container */}
             <ToastContainer
