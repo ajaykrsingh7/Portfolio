@@ -9,7 +9,7 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const speed = 120; 
+    const speed = 100; 
     let timeout;
 
     if (!isDeleting && index < fullText.length) {
@@ -40,7 +40,7 @@ export default function Hero() {
       {/* Left: Intro Text */}
       <div className="flex-1">
         {/* Typewriter Effect */}
-        <h1 className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-normal bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hero-name whitespace-nowrap">
+        <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-normal bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hero-name whitespace-nowrap">
           {displayedText}
            
           <span className="animate-pulse">|</span>
@@ -105,12 +105,12 @@ export default function Hero() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="flex-1 flex justify-center md:justify-center"
+        className="flex-1 flex justify-center md:justify-center "
       >
         <motion.img
           src={ProfilePic}
           alt="Ajay Kumar Singh"
-          className="w-[450.5px] h-[500px] object-cover border-4 border-indigo-500 dark:border-indigo-400 shadow-lg rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[0] rounded-br-[0]"
+          className="w-[400.5px] h-[450px] object-cover border-4 border-indigo-500 dark:border-indigo-400 shadow-lg rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[0] rounded-br-[0]"
         />
       </motion.div>
     </section>
