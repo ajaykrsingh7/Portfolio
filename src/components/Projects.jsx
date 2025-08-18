@@ -15,7 +15,7 @@ const projects = [
   {
     name: "Portfolio Website",
     desc: "Personal portfolio website showcasing my skills, projects, and contact information. Built using React.js, Tailwind CSS, and Framer Motion for smooth animations and responsive design.",
-    link: "https://github.com/ajaykrsingh7",
+    link: "https://portfolio-rajput-aj07.vercel.app/",
     img: PortfolioImg,
   },
 
