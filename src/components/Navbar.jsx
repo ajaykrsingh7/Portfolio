@@ -116,7 +116,7 @@ function Navbar() {
             <a
               href="/resume.pdf"
               download="Ajay-Kumar-Singh-Resume.pdf"
-              className="hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
+              className=" bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition cursor-pointer"
             >
               Resume
             </a>
