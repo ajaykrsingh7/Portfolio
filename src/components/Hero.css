@@ -1,13 +1,33 @@
+/* Slanted background for right side */
 .slanted-bg {
-  background-color: #000; /* black background */
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); /* bottom-left inclined */
-  transition: background-color 0.5s, transform 0.5s;
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+  transition: background-color 0.5s, clip-path 0.5s;
   z-index: 0;
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .slanted-bg {
-    background-color: #111; /* dark gray/black */
+    background: linear-gradient(135deg, #111 0%, #222 100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .slanted-bg {
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .slanted-bg {
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .slanted-bg {
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
   }
 }

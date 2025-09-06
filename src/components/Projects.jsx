@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import AyurvedaImg from "../assets/vedaai.png";
-import PortfolioImg from "../assets/portfolio.png";
+import PortfolioImg from "../assets/home.png";
 import DAMSImg from "../assets/tsk.png";
-import ApnaImg from "../assets/apnacollage.png"
-import AmazonImg from "../assets/amazon.png"
-import WsImg from "../assets/ws.png"
+import ApnaImg from "../assets/apnacollage.png";
+import AmazonImg from "../assets/amazon.png";
+import WsImg from "../assets/ws.png";
+
 const projects = [
   {
     name: "Ayurveda AI – Chatbot",
@@ -18,48 +19,44 @@ const projects = [
     link: "https://portfolio-rajput-aj07.vercel.app/",
     img: PortfolioImg,
   },
-
   {
     name: "DAMS – Hot Strip Mill Health Monitor",
-    desc: "(Under Production)Real-time monitoring system for Tata Steel to track Hot Strip Mill performance and enable predictive maintenance.",
+    desc: "(Under Production) Real-time monitoring system for Tata Steel to track Hot Strip Mill performance and enable predictive maintenance.",
     link: "https://github.com/ajaykrsingh7",
     img: DAMSImg,
   },
-
   {
     name: "Apna-Collage Clone",
-    desc: "Frontend UI clone of a college website showcasing courses, events, and student resources. Built with modern design principles, fully responsive layout, and clean navigation to replicate real-world educational platforms.",
+    desc: "Frontend UI clone of a college website showcasing courses, events, and student resources. Fully responsive with clean navigation.",
     link: "https://github.com/ajaykrsingh7/Amazon-Website-Clone",
     img: ApnaImg,
   },
-
   {
     name: "Amazon Clone",
-    desc: "Frontend UI replica of Amazon featuring product listings, categories, and search interface. Focused on responsive design, interactive components, and a seamless shopping layout to mimic the popular e-commerce experience.",
+    desc: "Frontend UI replica of Amazon featuring product listings, categories, and search interface. Responsive and interactive.",
     link: "https://github.com/ajaykrsingh7/Apana-collage-Website-clone",
     img: AmazonImg,
   },
-
   {
     name: "WSCube-Tech Clone",
-    desc: "Frontend UI clone of Wscube Tech platform highlighting courses, trainers, and learning resources. Designed with attention to modern UI/UX trends, responsive layouts, and visually appealing components for a realistic learning portal experience.",
+    desc: "Frontend UI clone of Wscube Tech platform highlighting courses, trainers, and learning resources with modern design.",
     link: "https://github.com/ajaykrsingh7/Wscubetech-clone",
     img: WsImg,
   },
-
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen py-20 px-6 sm:px-12 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="min-h-screen py-20 px-6 sm:px-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
       <div className="max-w-6xl mx-auto text-center">
+
         {/* Section Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100"
+          className="text-4xl sm:text-5xl font-extrabold text-gray-800 dark:text-gray-100 tracking-tight"
         >
           Projects
         </motion.h2>
@@ -70,11 +67,9 @@ export default function Projects() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed "
+          className="mt-4 max-w-3xl mx-auto text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed font-medium"
         >
-          <div className="text-xl">
-            A collection of my recent projects where I apply my skills in web development, AI integration, and cloud technologies.
-          </div>
+          A collection of my recent projects where I apply my skills in web development, AI integration, and cloud technologies.
         </motion.p>
 
         {/* Projects Grid */}
@@ -86,34 +81,33 @@ export default function Projects() {
           transition={{ staggerChildren: 0.2 }}
         >
           {projects.map((project, idx) => (
-            <motion.a
-              key={idx}
-              href={project.link}
-              whileHover={{ scale: 1.05 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg transition transform cursor-pointer flex flex-col justify-between"
-            >
-              {/* Project Image */}
-              <img
-                src={project.img}
-                alt={project.name}
-                className="w-full h-48 object-cover rounded-md mb-4"
-              />
+   <motion.a
+  key={idx}
+  href={project.link}
+  className="relative overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800 group cursor-pointer h-64 sm:h-72 md:h-80 flex items-center justify-center"
+  whileHover={{ scale: 1.02 }}
+>
+  {/* Image */}
+  <img
+    src={project.img}
+    alt={project.name}
+    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 group-hover:blur-sm"
+  />
 
-              {/* Project Name */}
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                {project.name}
-              </h3>
+  {/* Overlay with bottom-to-top gradient */}
+  <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-red-600 to-transparent flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 px-4 text-center">
+    <h3 className="text-xl sm:text-2xl font-bold text-white">{project.name}</h3>
+    <p className="text-white font-medium mt-2 text-sm sm:text-base">{project.desc}</p>
+    <span className="mt-4 px-6 py-2 rounded-full font-medium bg-gradient-to-r from-blue-400 to-white text-white hover:text-black transition">
+      View Project &rarr;
+    </span>
+  </div>
+</motion.a>
 
-              {/* Project Description */}
-              <pre className="mt-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base whitespace-pre-wrap text-left">
-                {project.desc}
-              </pre>
 
-              {/* View Project Link */}
-              <span className="mt-4 text-indigo-600 dark:text-indigo-400 font-medium">
-                View Project &rarr;
-              </span>
-            </motion.a>
+
+
+
           ))}
         </motion.div>
       </div>

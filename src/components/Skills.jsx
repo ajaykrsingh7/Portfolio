@@ -43,7 +43,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="min-h-screen py-20 px-6 sm:px-12 bg-white dark:bg-gray-800 flex flex-col justify-center">
+    <section id="skills" className="min-h-screen py-20 px-6 sm:px-12 bg-gray-100 dark:bg-gray-900 transition-colors duration-500 flex flex-col justify-center">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Heading */}
         <motion.h2
@@ -62,16 +62,14 @@ export default function Skills() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-4 text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed"
+          className="mt-4 text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto"
         >
-          <div className="text-2xl">
-            These are the technologies and tools I work with regularly to build scalable and modern web applications.
-          </div>
+          These are the technologies and tools I work with regularly to build scalable and modern web applications.
         </motion.p>
 
         {/* Skills Grid */}
         <motion.div
-          className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3"
+          className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -81,10 +79,10 @@ export default function Skills() {
             <motion.div
               key={idx}
               whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center justify-center gap-2 p-6 rounded-xl shadow-md bg-gray-100 dark:bg-gray-700 cursor-default transition"
+              className="flex flex-col items-center justify-center gap-2 p-6 rounded-xl shadow-md bg-gray-100 dark:bg-gray-800 cursor-default transition-transform duration-300"
             >
               {skill.icon}
-              <span className="font-semibold text-gray-800 dark:text-gray-100">{skill.name}</span>
+              <span className="font-semibold text-gray-800 dark:text-gray-100 mt-2">{skill.name}</span>
             </motion.div>
           ))}
         </motion.div>

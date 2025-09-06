@@ -1,91 +1,69 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import LogoImg from "../assets/download.png";
+import Lottie from "lottie-react";
+import codeAnimation from "../assets/footer.json"; // animation file
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 py-8 mt-20">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-6">
+    <footer className="bg-gray-200 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500 py-8">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-8">
 
-        <div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight tracking-normal bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hero-name whitespace-nowrap">Ajay's </h1>
-          <h1 className="text-3xl sm:text-5xl font-extrabold leading-tight tracking-normal bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hero-name whitespace-nowrap">Portfolio </h1>
-
+        {/* Logo with Icon and Animation */}
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2 text-3xl font-bold text-indigo-600 dark:text-indigo-400">
+           
+        
+          </div>
+          <div className="w-60 h-50">
+            <Lottie animationData={codeAnimation} loop={true} />
+          </div>
         </div>
 
         {/* Quick Links */}
-       <div className="flex gap-3 flex-col justify-center item-center">
-        <h3 className="text-2xl font-bold text-gray-100 dark:text-gray-100 mb-4 mt-4  text-gray-700 text-center mr-8">Direct Links</h3>
-          <div className="flex gap-6">
-             <ul className="flex gap-6 font-medium text-2xl flex-col">
-          <li>
-            <a href="#home" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#edcation" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              Education
-            </a>
-          </li>
-        </ul>
-        <div className="flex gap-6">
-          <ul className="flex gap-6 font-medium text-2xl flex-col">
-            <li>
-            <a href="#skills" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              Skills
-            </a>
-          </li>
-           <li>
-            <a href="#projects" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
-              Contact
-            </a>
-          </li>
-        </ul>
-        </div>
+        <div className="text-center lg:text-left">
+          <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+          <div className="grid grid-cols-2 gap-4">
+            <ul className="flex flex-col gap-2">
+              <li><a href="#home" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Home</a></li>
+              <li><a href="#about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About</a></li>
+              <li><a href="#education" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Education</a></li>
+            </ul>
+            <ul className="flex flex-col gap-2">
+              <li><a href="#skills" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Skills</a></li>
+              <li><a href="#projects" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Projects</a></li>
+              <li><a href="#contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact</a></li>
+            </ul>
           </div>
-        
-       </div>
+        </div>
 
-        {/* Social Icons */}
-        <div className="flex gap-4 flex-col ">
-          <h3 className="text-2xl font-bold text-gray-100 dark:text-gray-100 mb-4 mt-4  text-gray-700">
-            Connect With Me
-          </h3>
-          <div className="flex flex-col space-y-6 text-2xl">
-
-            <a href="https://github.com/ajaykrsingh7" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-gray-800 dark:text-gray-100 hover:text-gray-600">
-              <FaGithub size={24} />
-              
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/ajaykrsingh07/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-gray-800 dark:text-gray-100 hover:text-gray-600">
-              <FaLinkedin size={24} />
-             
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://twitter.com/iamAjaykrsingh7" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-gray-800 dark:text-gray-100 hover:text-gray-600">
-              <FaTwitter size={24} />
-             
-              <span>Twitter</span>
-            </a>
-
+        {/* Connect With Me */}
+        <div className="text-center lg:text-left">
+          <h3 className="text-lg font-bold mb-4">Connect With Me</h3>
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center justify-center lg:justify-start gap-3">
+              <FaGithub size={20} />
+              <a href="https://github.com/ajaykrsingh7" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
+                GitHub
+              </a>
+            </div>
+            <div className="flex items-center justify-center lg:justify-start gap-3">
+              <FaLinkedin size={20} />
+              <a href="https://www.linkedin.com/in/ajaykrsingh07/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
+                LinkedIn
+              </a>
+            </div>
+            <div className="flex items-center justify-center lg:justify-start gap-3">
+              <FaTwitter size={20} />
+              <a href="https://twitter.com/iamAjaykrsingh7" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition">
+                Twitter
+              </a>
+            </div>
           </div>
         </div>
 
       </div>
 
       {/* Copyright */}
-      <p className="mt-6 text-center text-xl text-gray-500 dark:text-gray-400">
+      <p className="mt-8 text-center text-gray-500 dark:text-gray-400 text-sm">
         &copy; {new Date().getFullYear()} Ajay Kumar Singh. All rights reserved.
       </p>
     </footer>
