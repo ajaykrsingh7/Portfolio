@@ -13,7 +13,7 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="bg-gray-50 text-gray-900">
+    <div className="font-sans bg-white dark:bg-black min-h-screen transition-colors duration-500">
       <Navbar />
       <Hero />
       <Education />
