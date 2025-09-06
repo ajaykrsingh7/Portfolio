@@ -1,118 +1,88 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import ProfilePic from "../assets/profile.jpg";
+import { Github, Linkedin, Mail } from "lucide-react";
+import './Hero.css';
+import { motion } from "framer-motion"; // optional for animation
 
-export default function Hero() {
-  const fullText = "Hi, I'm Ajay Kumar Singh";
-  const [displayedText, setDisplayedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const speed = 100; 
-    let timeout;
-
-    if (!isDeleting && index < fullText.length) {
-      timeout = setTimeout(() => {
-        setDisplayedText(fullText.slice(0, index + 1));
-        setIndex(index + 1);
-      }, speed);
-    } else if (!isDeleting && index === fullText.length) {
-      // pause after full text
-      timeout = setTimeout(() => setIsDeleting(true), 1000);
-    } else if (isDeleting && index > 0) {
-      timeout = setTimeout(() => {
-        setDisplayedText(fullText.slice(0, index - 1));
-        setIndex(index - 1);
-      }, speed);
-    } else if (isDeleting && index === 0) {
-      timeout = setTimeout(() => setIsDeleting(false), 500);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [index, isDeleting, fullText]);
-
+const Hero = () => {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-between text-center md:text-left px-6 gap-8 pt-20"
-    >
-      {/* Left: Intro Text */}
-      <div className="flex-1">
-        {/* Typewriter Effect */}
-        <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-normal bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hero-name whitespace-nowrap">
-          {displayedText}
-           
-          <span className="animate-pulse">|</span>
-        </h1>
-
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+    <section className="min-h-screen flex flex-col md:flex-row bg-gray-200 dark:bg-gray-900 transition-colors duration-500">
+      {/* LEFT SIDE */}
+      <div className="md:w-1/2 w-full flex flex-col justify-center items-start px-10 md:px-16 py-12 space-y-4">
+        <motion.h3 
+          className="text-xl text-gray-800 dark:text-gray-300"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-4 text-xl sm:text-2xl text-gray-700 dark:text-gray-300"
+          transition={{ duration: 0.8 }}
         >
-          <div className="text-2xl text-bold mt-4 text-lg text-gray-800">
-            Full Stack Developer(MERN) | AI & Cloud Enthusiast
-          </div>
-        </motion.h2>
+          Hi, I am
+        </motion.h3>
+
+        <motion.h1 
+          className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Ajay Singh
+        </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mt-6 max-w-2xl text-gray-600 dark:text-gray-400"
+          className="text-lg text-gray-600 dark:text-gray-400 max-w-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="text-xl text bold mt-4 text-lg text-gray-800">
-            I build modern, scalable web apps with React, Node.js, and AI
-          integration. Passionate about creating projects that merge innovation
-          with functionality.
-          </div>
+          Full-Stack Developer / UI Designer
         </motion.p>
 
-        {/* CTA Buttons */}
-        <motion.div
+        {/* Social Links */}
+        <motion.div 
+          className="flex space-x-4 mt-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start"
+          transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a
-            href="#projects"
-            className="px-6 py-3 rounded-2xl bg-indigo-600 text-white font-semibold shadow-lg hover:bg-indigo-700 transition cursor-pointer"
+            href="mailto:ajaykrsingh2002@gmail.com"
+            className="p-3 bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-transform transform hover:scale-110 rounded-lg"
           >
-            View Projects
+            <Mail size={24} className="text-gray-800 dark:text-white" />
           </a>
           <a
-            href="#contact"
-            className="px-6 py-3 rounded-2xl border border-gray-300 dark:border-gray-700 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition cursor-pointer"
+            href="https://github.com/ajaykrsingh7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-transform transform hover:scale-110 rounded-lg"
           >
-            Contact Me
+            <Github size={24} className="text-gray-800 dark:text-white" />
+          </a>
+          <a
+            href="https://linkedin.com/in/ajaykrsingh07"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-white dark:bg-gray-800 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-transform transform hover:scale-110 rounded-lg"
+          >
+            <Linkedin size={24} className="text-gray-800 dark:text-white" />
           </a>
         </motion.div>
       </div>
 
-      {/* Right: Profile Image */}
-      <motion.div
-        initial={{ y: 0, scale: 1 }}
-        animate={{
-          y: [0, -20, 0, 20, 0],
-          scale: [0.98, 1, 0.98, 1, 0.98],
-        }}
-        transition={{
-          delay: 0.5,
-          duration: 4,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="flex-1 flex justify-center md:justify-center "
-      >
+      {/* RIGHT SIDE */}
+      <div className="md:w-1/2 w-full relative overflow-hidden flex justify-end items-center">
+        {/* Slanted Background */}
+        <div className="slanted-bg absolute top-0 right-0 bottom-0 left-0  w-full h-full"></div>
+
+        {/* Image */}
         <motion.img
-          src={ProfilePic}
-          alt="Ajay Kumar Singh"
-          className="w-[400.5px] h-[450px] object-cover border-4 border-indigo-500 dark:border-indigo-400 shadow-lg rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[0] rounded-br-[0]"
+          src="/my-photo.png"
+          alt="Ajay Singh"
+          className="relative z-10 object-contain max-h-[90%]"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
         />
-      </motion.div>
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;

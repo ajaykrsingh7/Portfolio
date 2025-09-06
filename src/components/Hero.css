@@ -1,0 +1,13 @@
+.slanted-bg {
+  background-color: #000; /* black background */
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); /* bottom-left inclined */
+  transition: background-color 0.5s, transform 0.5s;
+  z-index: 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .slanted-bg {
+    background-color: #111; /* dark gray/black */
+  }
+}
