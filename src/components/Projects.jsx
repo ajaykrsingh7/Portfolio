@@ -9,7 +9,7 @@ import WsImg from "../assets/ws.png";
 const projects = [
   {
     name: "SalonEase-A Pre Booking System",
-    desc: "Developed a full-stack web application that enables users to pre-book salon services online. The system provides user authentication, service browsing, appointment booking, and admin management features. The project was built collaboratively in a team, where I contributed to both frontend (React, Tailwind CSS, Vercel) and backend (Node.js, Express, MongoDB, Render) development, API integration, and deployment.",
+    desc: "A team-based full-stack project for online salon appointment booking with user authentication, service management, and admin panel. Built using React, Node.js, Express, MongoDB, and deployed on Vercel & Render.",
     link: "https://salonease7.vercel.app/",
     img: SalonImg,
   },
