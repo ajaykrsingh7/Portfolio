@@ -3,15 +3,15 @@ import AyurvedaImg from "../assets/vedaai.png";
 import PortfolioImg from "../assets/home.png";
 import DAMSImg from "../assets/tsk.png";
 import ApnaImg from "../assets/apnacollage.png";
-import AmazonImg from "../assets/amazon.png";
+import SalonImg from "../assets/salonImg.png";
 import WsImg from "../assets/ws.png";
 
 const projects = [
   {
-    name: "Ayurveda AI – Chatbot",
-    desc: "Interactive AI-powered chatbot providing personalized Ayurveda tips and remedies with real-time responses.",
-    link: "https://github.com/ajaykrsingh7/Chatbot",
-    img: AyurvedaImg,
+    name: "SalonEase-A Pre Booking System",
+    desc: "Developed a full-stack web application that enables users to pre-book salon services online. The system provides user authentication, service browsing, appointment booking, and admin management features. The project was built collaboratively in a team, where I contributed to both frontend (React, Tailwind CSS, Vercel) and backend (Node.js, Express, MongoDB, Render) development, API integration, and deployment.",
+    link: "https://salonease7.vercel.app/",
+    img: SalonImg,
   },
   {
     name: "Portfolio Website",
@@ -20,10 +20,10 @@ const projects = [
     img: PortfolioImg,
   },
   {
-    name: "DAMS – Hot Strip Mill Health Monitor",
-    desc: "(Under Production) Real-time monitoring system for Tata Steel to track Hot Strip Mill performance and enable predictive maintenance.",
-    link: "https://github.com/ajaykrsingh7",
-    img: DAMSImg,
+    name: "Ayurveda AI – Chatbot",
+    desc: "Interactive AI-powered chatbot providing personalized Ayurveda tips and remedies with real-time responses.",
+    link: "https://github.com/ajaykrsingh7/Chatbot",
+    img: AyurvedaImg,
   },
   {
     name: "Apna-Collage Clone",
@@ -32,10 +32,10 @@ const projects = [
     img: ApnaImg,
   },
   {
-    name: "Amazon Clone",
-    desc: "Frontend UI replica of Amazon featuring product listings, categories, and search interface. Responsive and interactive.",
-    link: "https://github.com/ajaykrsingh7/Apana-collage-Website-clone",
-    img: AmazonImg,
+    name: "DAMS – Hot Strip Mill Health Monitor",
+    desc: "(Under Production) Real-time monitoring system for Tata Steel to track Hot Strip Mill performance and enable predictive maintenance.",
+    link: "https://github.com/ajaykrsingh7",
+    img: DAMSImg,
   },
   {
     name: "WSCube-Tech Clone",
